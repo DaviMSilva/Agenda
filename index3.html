@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilo3.css">
+    <script src="funcao3.js"> </script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js" 
+        integrity="sha512-d4KkQohk+HswGs6A1d6Gak6Bb9rMWtxjOa0IiY49Q3TeFd5xAzjWXDCBW9RS7m86FQ4RzM2BdHmdJnnKRYknxw==" 
+        crossorigin="anonymous">
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#ifone").mask("(99) 99999-9999")
+         })     
+    </script>
+    <script>
+
+        
+    </script>
+    
+    
+</head>
+<body>
+    <main>
+    <h1>Agenda de Contatos</h1>
+    <hr/>
+    <section id="container">
+    <form onsubmit="addNewContact()" id = "form">
+        <div>
+            <label>Nome: </label><br/>
+            <input type="text" name="inome"  size="30" required onclick="clickname()" />
+        </div>
+        <div id = "fone">
+                <label>Telefone: </label><br/>
+                <input type="text" name="ifone" id="ifone" size="30" onchange="teste1()"/>
+                <small>"88 98945 6978"</small>
+        </div>
+        <div>
+            <label>Email: </label><br/>
+            <input type="email" name="iemail" size="30" onclick="teste()"/>
+            <small>"contato@email.com"</small>
+        </div>
+        <div>
+            <label>Local: </label><br/>
+            <input type="text" name="ilocal" size="30"/>
+        </div>
+        <button type="submit" name= "btnSalvar" id = "btnSalvar">Salvar<img src="https://img.icons8.com/offices/30/000000/address-book.png" /></button>    
+          
+    </form>
+    <hr/>
+    <div id="listagem">
+        <h3>Contatos:</h3>
+        <ul id="listContact">
+         
+
+        </ul>
+    </div>
+    </section>
+    </main>
+</body>
+</html>
